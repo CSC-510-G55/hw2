@@ -9,9 +9,29 @@ on:
       - main
 
 jobs:
-  testsuite:
+  unit-tests:
+    name: Unit Tests
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      
+      - name: Set up Environment
+        run: |
+          sudo apt update -y
+          sudo apt upgrade -y
+          sudo apt install software-properties-common -y
+          sudo add-apt-repository ppa:deadsnakes/ppa -y
+          sudo apt update -y
+          sudo apt install python3.13 -y
+
+          alias python=python3.13
+          alias pip=python3.13 -m pip
+
+          pip install pytest pytest-cov
+
+      - name: Test with pytest
+        run: |
+          #TODO: Decide if test files should be merged
+          pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
