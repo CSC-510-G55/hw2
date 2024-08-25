@@ -27,7 +27,7 @@ jobs:
           sudo apt install python3.13 -y
 
           alias python=python3.13
-          alias pip=python3.13 -m pip
+          alias pip='python3.13 -m pip'
 
           pip install pytest pytest-cov
 
