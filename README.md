@@ -1,5 +1,7 @@
 # [Howework 1: A Beautiful Repo](https://txt.github.io/se24fall/hw1.html)
 
-![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![](https://img.shields.io/github/license/CSC-510-G57/hw1?style=for-the-badge)
+![Unit Tests](https://github.com/CSC-510-G55/hw1/actions/workflows/testsuite.yml/badge.svg)
+![Codecov](https://codecov.io/gh/CSC-510-G55/hw1/graph/badge.svg)
+![Language](https://img.shields.io/badge/language-python%20v13.3-green)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-linux-green)
