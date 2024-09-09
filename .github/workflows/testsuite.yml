@@ -1,5 +1,4 @@
-name: Run Testsuite
-
+name: Unit Test
 on:
   push:
     branches:
