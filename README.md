@@ -1,4 +1,4 @@
-# [Howework 1: A Beautiful Repo](https://txt.github.io/se24fall/debug.html)
+# [Howework 2: Debugging](https://txt.github.io/se24fall/debug.html)
 
 ![Unit Tests](https://github.com/CSC-510-G55/hw2/actions/workflows/testsuite.yml/badge.svg)
 ![Codecov](https://codecov.io/gh/CSC-510-G55/hw2/graph/badge.svg)
