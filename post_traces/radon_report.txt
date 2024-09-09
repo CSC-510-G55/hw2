@@ -1,0 +1,5 @@
+hw2_debugging.py
+    F 18:0 recombine - B (6)
+    F 8:0 merge_sort - A (2)
+rand.py
+    F 8:0 random_array - A (2)
