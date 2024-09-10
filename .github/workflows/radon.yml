@@ -27,7 +27,7 @@ jobs:
           echo "$output" > radon.txt
           echo "::notice title=Radon::$output"
       
-      - name: Radon Report
+      - name: Radon report
         uses: actions/upload-artifact@v4
         with:
           name: radon-report

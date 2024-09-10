@@ -27,7 +27,7 @@ jobs:
           echo "$output" > pylint.txt
           echo "::notice title=Pylint::$output"
       
-      - name: Pylint Report
+      - name: Pylint report
         uses: actions/upload-artifact@v4
         with:
           name: pylint-report
