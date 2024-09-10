@@ -1,0 +1,34 @@
+name: Pylint
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pylint:
+    name: Pylint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Environment
+        run: |
+          chmod +x ./.github/workflows/setup.sh && ./.github/workflows/setup.sh
+          pip install pylint
+      
+      - name: Run Pylint
+        run: |
+          output=$(pylint hw2_debugging.py rand.py --output-format=parseable)
+          echo "$output" > pylint.txt
+          echo "::notice title=Pylint::$output"
+      
+      - name: Pylint report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pylint-report
+          path: pylint.txt
