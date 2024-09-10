@@ -18,6 +18,7 @@ jobs:
       
       - name: Set up Environment
         run: |
+          pwd
           ./github/workflows/setup.sh
           pip install pytest pytest-cov
 
