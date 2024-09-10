@@ -24,4 +24,11 @@ jobs:
       - name: Run Radon
         run: |
           output=$(radon cc hw2_debugging.py rand.py -a -nc)
+          echo "$output" > radon.txt
           echo "::notice title=Radon::$output"
+      
+      - name: Radon Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: radon-report
+          path: radon.txt
