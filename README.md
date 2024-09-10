@@ -5,3 +5,4 @@
 ![Language](https://img.shields.io/badge/language-python%20v3.13-green)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-linux-green)
+[![Pylint](https://github.com/CSC-510-G55/hw2/actions/workflows/pylint.yml/badge.svg)](https://github.com/CSC-510-G55/hw2/actions/workflows/pylint.yml)

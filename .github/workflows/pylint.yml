@@ -23,4 +23,5 @@ jobs:
       
       - name: Run Pylint
         run: |
-          pylint hw2_debugging.py rand.py --output-format=parseable
+          output=$(pylint hw2_debugging.py rand.py --output-format=parseable)
+          echo "::notice title=Pylint::$output"
