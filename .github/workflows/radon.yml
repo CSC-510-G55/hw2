@@ -23,7 +23,7 @@ jobs:
       
       - name: Run Radon
         run: |
-          output=$(radon cc hw2_debugging.py rand.py -a -nc)
+          output=$(radon cc hw2_debugging.py rand.py -s)
           echo "$output" > radon.txt
           echo "::notice title=Radon::$output"
       
