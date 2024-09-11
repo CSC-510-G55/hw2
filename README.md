@@ -7,3 +7,4 @@
 ![Platform](https://img.shields.io/badge/platform-linux-green)
 [![Pylint](https://github.com/CSC-510-G55/hw2/actions/workflows/pylint.yml/badge.svg)](https://github.com/CSC-510-G55/hw2/actions/workflows/pylint.yml)
 [![Radon](https://github.com/CSC-510-G55/hw2/actions/workflows/radon.yml/badge.svg)](https://github.com/CSC-510-G55/hw2/actions/workflows/radon.yml)
+[![Autopep8](https://github.com/CSC-510-G55/hw2/actions/workflows/autopep8.yml/badge.svg](https://github.com/CSC-510-G55/hw2/actions/workflows/autopep8.yml)
