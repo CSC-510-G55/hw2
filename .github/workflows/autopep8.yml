@@ -25,11 +25,11 @@ jobs:
 
       - name: Format code with autopep8
         run: |
-        autopep8 --in-place --recursive .
-        git diff
-        if [ -n "$(git diff)" ]; then
-          echo "Code is not formatted. Please run autopep8 locally."
-          exit 1
-        fi
+          autopep8 --in-place --recursive .
+          git diff
+          if [ -n "$(git diff)" ]; then
+            echo "Code is not formatted. Please run autopep8 locally."
+            exit 1
+          fi
         env:
           REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
