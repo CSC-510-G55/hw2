@@ -3,11 +3,9 @@ on:
   push:
     branches:
       - main
-      - feature-bhushan1
   pull_request:
     branches:
       - main
-      - feature-bhushan1
 
 jobs:
   autopep8:
