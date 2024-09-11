@@ -23,12 +23,18 @@ jobs:
 
       - name: Format code with autopep8
         run: |
+          #autopep8 --in-place --recursive .
+          #git diff
+          #if [ -n "$(git diff)" ]; then
+          #  git config --global user.name "github-actions"
+          #  git config --global user.email "github-actions@github.com"
+          #  git add .
+          #  git commit -m "Format code with autopep8"
+          #  git push
+          #fi
           autopep8 --in-place --recursive .
           git diff
           if [ -n "$(git diff)" ]; then
-            git config --global user.name "github-actions"
-            git config --global user.email "github-actions@github.com"
-            git add .
-            git commit -m "Format code with autopep8"
-            git push
+            echo "Code is not formatted. Please run autopep8 locally."
+            exit 1
           fi
