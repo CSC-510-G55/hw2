@@ -30,6 +30,7 @@ jobs:
           if [ -n "$(git diff)" ]; then
             git config --global user.name "github-actions"
             git config --global user.email "github-actions@github.com"
+            git remote set-url origin https://x-access-token:${{ secrets.REPO_TOKEN_AUTOPEP }}@github.com/${{ github.repository }}
             git add .
             git commit -m "Format code with autopep8"
             git push
