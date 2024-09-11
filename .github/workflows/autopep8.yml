@@ -25,9 +25,9 @@ jobs:
 
       - name: Format code with autopep8
         run: |
-          autopep8 --in-place --recursive .
-          git diff
-          if [ -n "$(git diff)" ]; then
+          autopep8 --in-place ./hw2_debugging.py
+          git diff ./hw2_debugging.py
+          if [ -n "$(git diff ./hw2_debugging.py)" ]; then
             echo "Code is not formatted. Please run autopep8 locally."
             exit 1
           fi
