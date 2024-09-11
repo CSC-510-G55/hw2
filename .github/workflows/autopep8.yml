@@ -35,6 +35,7 @@ jobs:
             git commit -m "Format code with autopep8"
             git push
           fi
+          
           #autopep8 --in-place --recursive .
           #git diff
           #if [ -n "$(git diff)" ]; then
