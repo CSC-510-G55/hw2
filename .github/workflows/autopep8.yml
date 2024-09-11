@@ -1,0 +1,35 @@
+name: Autopep8
+on:
+  push:
+    branches:
+      - main
+      - feature-bhushan1
+  pull_request:
+    branches:
+      - main
+      - feature-bhushan1
+
+jobs:
+  autopep8:
+    name: Autopep8
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+    
+      - name: Set up Environment
+        run: |
+          chmod +x ./.github/workflows/setup.sh && ./.github/workflows/setup.sh
+          pip install autopep8 pre-commit
+
+      - name: Format code with autopep8
+        run: |
+        autopep8 --in-place --recursive .
+        git diff
+        if [ -n "$(git diff)" ]; then
+          echo "Code is not formatted. Please run autopep8 locally."
+          exit 1
+        fi
+        env:
+          REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
