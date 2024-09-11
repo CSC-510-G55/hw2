@@ -36,6 +36,7 @@ def recombine(left_arr, right_arr):
 
     return merge_arr
 
+
 input_arr = rand.random_array([None] * 20)
 print(input_arr)
 arr_out = merge_sort(input_arr)
